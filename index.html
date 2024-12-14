@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to HTML Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/2.1.1/tesseract.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Image to HTML Converter</h1>
+        <p id="progress">Convert your images into HTML code effortlessly.</p>
+        
+        <div class="upload-section">
+            <label for="image-upload" class="custom-file-upload">
+                Choose Image
+            </label>
+            <input type="file" id="image-upload" accept="image/*">
+            <button id="convert-btn">Convert</button>
+            <br>
+            <br>
+            <p id="upload-status">Let's Go, Buddy!</p>
+            <select id="language-select">
+                <option value="eng">English</option>
+                <option value="fra">French</option>
+                <option value="spa">Spanish</option>
+            </select>            
+        </div>        
+
+        <!-- Status message for image upload -->
+        <div id="upload-status" class="upload-status"></div>
+
+        <div class="output-section">
+            <h2>Generated HTML Code</h2>
+            <textarea id="html-output" readonly></textarea>
+            <button id="copy-btn">Copy Code</button>
+            <button id="download-btn">Download HTML</button>
+            <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
+        </div>
+        <div class="footer-content">
+            <footer>
+                <p>&copy; 2024 Image to HTML Converter | <a href="#">Contact Us</a></p>
+            </footer>
+        </div>  
+    </div>    
+    <script src="script.js"></script>
+</body>
+</html>
